@@ -7,6 +7,7 @@ This repository contains C programs designed for learners who want to understand
 1. Clone the repository.
 2. Compile the C programs using a C compiler (e.g., `gcc`).
 3. **Important:** Please store your compiled executable files (`.exe`) in the `output/` directory.
+4. **Important for VSCode users:** create .vscode folder and make a c_cpp_properties.json file in it and add the include path of the compiler.
 
 ## Project Structure
 
