@@ -1,43 +1,44 @@
-/*Develop a c program to implement the process system calls (fork( ), exec( ), wait( ), create 
+/*Develop a c program to implement the process system calls (fork( ), exec( ), wait( ), create
 process, terminate process)*/
 
-#include <stdio.h>  
-#include <stdlib.h> 
-#include <unistd.h> 
-#include <sys/types.h> 
-#include <sys/wait.h> 
-int main()  
-{ 
-pid_t child_pid; 
-child_pid = fork(); 
-if (child_pid < 0) { 
-perror("Fork failed"); 
-exit(1); 
-} 
-if (child_pid == 0)  
-{ 
-printf("Child process (PID: %d) is running...\n", getpid()); 
-char *args[] = {"ls", "-l", NULL}; 
-execvp ("ls", args); 
-perror("Exec failed"); 
-exit(1); 
-}  
-else  
-{ 
-printf("Parent process (PID: %d) is running...\n", getpid()); 
-int status;
-waitpid(child_pid, &status, 0); 
-if (WIFEXITED(status))  
-{ 
-printf("Child process (PID: %d) has exited with status %d\n", child_pid, WEXITSTATUS(status)); 
-}  
-else if (WIFSIGNALED(status))  
-{ 
-printf("Child process (PID: %d) was terminated by signal %d\n", child_pid, WTERMSIG(status)); 
-} 
-printf("Parent process (PID: %d) is exiting...\n", getpid()); 
-} 
-return 0; 
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+int main()
+{
+    pid_t child_pid;
+    child_pid = fork();
+    if (child_pid < 0)
+    {
+        perror("Fork failed");
+        exit(1);
+    }
+    if (child_pid == 0)
+    {
+        printf("Child process (PID: %d) is running...\n", getpid());
+        char *args[] = {"ls", "-l", NULL};
+        execvp("ls", args);
+        perror("Exec failed");
+        exit(1);
+    }
+    else
+    {
+        printf("Parent process (PID: %d) is running...\n", getpid());
+        int status;
+        waitpid(child_pid, &status, 0);
+        if (WIFEXITED(status))
+        {
+            printf("Child process (PID: %d) has exited with status %d\n", child_pid, WEXITSTATUS(status));
+        }
+        else if (WIFSIGNALED(status))
+        {
+            printf("Child process (PID: %d) was terminated by signal %d\n", child_pid, WTERMSIG(status));
+        }
+        printf("Parent process (PID: %d) is exiting...\n", getpid());
+    }
+    return 0;
 }
 /*Output
 Parent process (PID: 12345) is running...
