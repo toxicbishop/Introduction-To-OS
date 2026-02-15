@@ -2,12 +2,12 @@
 #include <stdio.h>
 int main()
 {
-  /* array will store at most 5 process with 3 resoures if your process or
+  /* array will store at most 5 process with 3 resources if your process or
   resources is greater than 5 and 3 then increase the size of array */
   int p, c, count = 0, i, j, alc[5][3], max[5][3], need[5][3], safe[5], available[3], done[5], terminate = 0;
   printf("Enter the number of process and resources");
   scanf("%d %d", &p, &c);
-  // p is process and c is diffrent resources
+  // p is process and c is different resources
   printf("enter allocation of resource of all process %dx%d matrix", p, c);
   for (i = 0; i < p; i++)
   {

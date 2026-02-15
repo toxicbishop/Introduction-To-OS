@@ -10,9 +10,9 @@ void main()
 {
     int nf = 0, i = 0, j = 0, ch;
 b) Two level directory 
-char mdname[10],fname[10][10],name[10];
+char mname[10],fname[10][10],name[10];
 printf("Enter the directory name:");
-scanf("%s", mdname);
+scanf("%s", mname);
 printf("Enter the number of files:");
 scanf("%d", &nf);
 do
@@ -34,7 +34,7 @@ do
     printf("Do you want to enter another file(yes - 1 or no - 0):");
     scanf("%d", &ch);
 } while (ch == 1);
-printf("Directory name is:%s\n", mdname);
+printf("Directory name is:%s\n", mname);
 printf("Files names are:");
 for (i = 0; i < j; i++)
     printf("\n%s", fname[i]);
@@ -62,14 +62,14 @@ file3
 void main()
 {
     int i, j, n, ch, nf, k = 0;
-    char mdname[10][10], fname[10][10][10], name[10];
+    char mname[10][10], fname[10][10][10], name[10];
     printf("Enter the number of directories:");
     scanf("%d", &n);
     for (i = 0; i < n; i++)
     {
         printf("Enter the directory name:");
-        scanf("%s", mdname[i]);
-        printf("Enter the number of files in directory %s:", mdname[i]);
+        scanf("%s", mname[i]);
+        printf("Enter the number of files in directory %s:", mname[i]);
         scanf("%d", &nf);
         for (j = 0; j < nf; j++)
         {
@@ -92,7 +92,7 @@ void main()
     printf("Directory name\tFiles names\n");
     for (i = 0; i < n; i++)
     {
-        printf("%s\t\t", mdname[i]);
+        printf("%s\t\t", mname[i]);
         for (j = 0; j < nf; j++)
             printf("%s\t", fname[i][j]);
         printf("\n");

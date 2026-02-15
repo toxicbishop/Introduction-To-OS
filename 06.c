@@ -46,7 +46,7 @@ for (i = 1; i <= nf; i++)
     bf[ff[i]] = 1;
     highest = 0;
 }
-printf("\nFile_no:\tFile_size :\tBlock_no:\tBlock_size:\tFragement");
+printf("\nFile_no:\tFile_size :\tBlock_no:\tBlock_size:\tFragment");
 for (i = 1; i <= nf; i++)
     printf("\n%d\t\t%d\t\t%d\t\t%d\t\t%d", i, f[i], ff[i], b[ff[i]], frag[i]);
 }
@@ -68,7 +68,7 @@ File 3:250
 File 4:350
 File 5:450
 
-File_no:	File_size :	Block_no:	Block_size:	Fragement
+File_no:	File_size :	Block_no:	Block_size:	Fragment
 1		50		5		600		550
 2		150		4		300		150
 3		250		2		500		250
@@ -119,7 +119,7 @@ void main()
         bf[ff[i]] = 1;
         lowest = 10000;
     }
-    printf("\nFile_no:\tFile_size :\tBlock_no:\tBlock_size:\tFragement");
+    printf("\nFile_no:\tFile_size :\tBlock_no:\tBlock_size:\tFragment");
     for (i = 1; i <= nf; i++)
         printf("\n%d\t\t%d\t\t%d\t\t%d\t\t%d", i, f[i], ff[i], b[ff[i]], frag[i]);
 }
@@ -141,7 +141,7 @@ File 3:250
 File 4:350
 File 5:450
 
-File_no:	File_size :	Block_no:	Block_size:	Fragement
+File_no:	File_size :	Block_no:	Block_size:	Fragment
 1		50		1		100		50
 2		150		3		200		50
 3		250		2		500		250
@@ -209,7 +209,7 @@ File 1:50
 File 2:150
 File 3:250
 
-File_no:	File_size :	Block_no:	Block_size:	Fragement
+File_no:	File_size :	Block_no:	Block_size:	Fragment
 1		50		1		100		50
 2		150		2		500		350
 3		250		3		200		-50
