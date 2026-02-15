@@ -25,7 +25,7 @@ int pagefault(int a[], int frame[], int n, int no)
         if (avail == 0)
         {
             frame[j] = a[i];
-            /* j will calculate the position at which the new page add */
+            /* j will calculate the position at which the new page is added */
             j = (j + 1) % no;
             count++; // variable count calculates the total page fault
         }

@@ -9,7 +9,7 @@ b) Two Level Directory
 void main()
 {
     int nf = 0, i = 0, j = 0, ch;
-b) Two level directory 
+// b) Two level directory 
 char mname[10],fname[10][10],name[10];
 printf("Enter the directory name:");
 scanf("%s", mname);

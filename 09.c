@@ -1,4 +1,4 @@
-/*) Develop a C program to simulate the Linked file allocation strategies*/
+/* Develop a C program to simulate the Linked file allocation strategies*/
 #include <stdio.h>
 struct file
 {

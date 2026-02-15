@@ -57,7 +57,7 @@ Process	Burst Time	Waiting Time	Turnaround Time
 2	4		6		10
 3	8		10		18
 
-Total wating Time: 16
+Total Waiting Time: 16
 Average Waiting Time: 5.333333
 Total Turnaround Time: 34
 Average Turnaround Time: 11.333333
@@ -174,6 +174,7 @@ int main()
             if (count > 0)
             {
                 flag = 1; // There are still processes with burst time left
+
                 count = (count >= ts) ? ts : count;
                 printf("Process %d from %d to %d\n", p[i].pno, ptm, ptm + count);
                 ptm += count;
